@@ -25,7 +25,6 @@ class Calculator {
             List<Integer> negatives = numbers.stream().filter(number -> number < 0).collect(Collectors.toList());
 
             if (negatives.size() != 0) {
-                System.out.println("negatives not allowed: " + negatives.stream().map(Object::toString).collect(Collectors.joining(", ")));
                 throw new NumberFormatException("negatives not allowed: " + negatives.stream().map(Object::toString).collect(Collectors.joining(", ")));
             }
 
